@@ -39,13 +39,13 @@ datos.forEach((d, i) => {
 });
 
 async function users() {
-    const consulta = await fetch("https://randomuser.me/api/?results=3");
+    const consulta = await fetch("https://randomuser.me/api/?results=4");
     const data = await consulta.json();
     const resultados = data.results;
     console.log(resultados);
     resultados.forEach((p) => {
         document.getElementById("personas").innerHTML +=
-            '<div class="col-lg-4"><div class="testimonial-item mx-auto mb-5 mb-lg-0"><img class="img-fluid rounded-circle mb-3" src="' +
+            '<div class="col-lg-3"><div class="testimonial-item mx-auto mb-5 mb-lg-0"><img class="img-fluid rounded-circle mb-3" src="' +
             p.picture.large +
             '" alt="..." /><h5>' +
             p.name.first +
